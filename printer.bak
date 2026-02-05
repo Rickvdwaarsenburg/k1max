@@ -12,6 +12,8 @@
 [include sensorless.cfg]
 [include gcode_macro.cfg]
 [include printer_params.cfg]
+[include Helper-Script/git-backup.cfg]
+[include start_macro.cfg]
 [include Helper-Script/timelapse.cfg]
 [include Helper-Script/screws-tilt-adjust.cfg]
 [include Helper-Script/save-zoffset.cfg]
@@ -44,11 +46,6 @@ hysteresis: 10
 
 [mcu rpi]
 serial: /tmp/klipper_host_mcu
-
-[bl24c16f]
-i2c_mcu: rpi
-i2c_bus: i2c.2
-i2c_speed: 400000
 
 [idle_timeout]
 timeout: 99999999
@@ -447,7 +444,6 @@ max_accel: 20000
 max_accel_to_decel: 20000
 max_z_velocity: 20
 square_corner_velocity: 5.0
-square_corner_max_velocity: 200.0
 max_z_accel: 300
 
 [pause_resume]
